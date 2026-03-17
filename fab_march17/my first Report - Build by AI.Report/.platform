@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "my first Report - Build by AI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "02cce050-7084-a318-41db-c5d5c8700557"
+  }
+}

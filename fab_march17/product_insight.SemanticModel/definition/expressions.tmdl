@@ -1,0 +1,9 @@
+expression 'DirectLake - FabConDatabase_019' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/49cf1fc1-6096-4cf8-83d0-a7d7261701d8/ca736ba2-4661-424f-a86e-294c30009f0a", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 0a9b4f1b-ca70-42b6-8ff8-b0cdafdbd9f4
+
+	annotation PBI_IncludeFutureArtifacts = False
+

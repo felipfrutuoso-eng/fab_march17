@@ -1,0 +1,87 @@
+table Suppliers
+	lineageTag: f0a71193-0516-4b94-8851-cdd6e76cc042
+	sourceLineageTag: [SupplyChain].[Suppliers]
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fe44414-7fec-4861-bacd-39903e436b19
+		sourceLineageTag: SupplierID
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SupplierName
+		dataType: string
+		lineageTag: 05530ca0-8d4e-4000-8ecf-7952c89d0339
+		sourceLineageTag: SupplierName
+		summarizeBy: none
+		sourceColumn: SupplierName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactName
+		dataType: string
+		lineageTag: d5dc9249-ceb5-4240-9fdd-97fd6ef35948
+		sourceLineageTag: ContactName
+		summarizeBy: none
+		sourceColumn: ContactName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 2ba58b8f-0e3e-46f7-b391-7deacf054afb
+		sourceLineageTag: Phone
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: f4c45306-e485-4dbb-86cc-4134d7a5d90b
+		sourceLineageTag: Email
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column SupplierLocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 58fb719b-b688-4f10-a23f-e43adc6f6884
+		sourceLineageTag: SupplierLocationID
+		summarizeBy: count
+		sourceColumn: SupplierLocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a5a9dd0c-66d4-400c-95f5-871c8aafefa3
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 164383b0-991c-4ff2-a52c-f8ab11792041
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Suppliers = entity
+		mode: directLake
+		source
+			entityName: Suppliers
+			schemaName: SupplyChain
+			expressionSource: 'DirectLake - FabConDatabase_019'
+
